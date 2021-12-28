@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}baby ka bubu :){% endblock %}
+
+{% block content %}
+        <h1>
+            I love you baby
+        </h1>
+        <img src="/static/hey.jpg" width="400" height="300">
+        <h2>
+            {% if message %}
+            <ul>
+                {{message}}
+            </ul>
+                
+            {% else %}
+                baby you are beautiful
+            {%endif %}
+        </h2>
+        <p>
+            Ghara aaate hue yeh sb lana
+            <ul>
+                {% for items in items %}
+                <li>
+                    {{items}}
+                </li>
+                {% endfor %}
+            </ul>
+        </p>
+        <h3>
+            we are going to
+            <button> 
+                <a href="{{url_for('yoyo',name='Kuhu')}}" > Secret message for you </a>   
+            </button>
+        
+        </h3>
+        <h4>
+            For food please refer
+            <button>
+            <a href="{{url_for('menu')}}"> Food Fun  </a>
+            </button>
+        </h4>
+{% endblock %}
